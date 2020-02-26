@@ -13,14 +13,14 @@ const userSchema = new mongoose.Schema({
         type        :   String,
         required    :   true
     },
-    eventName : {
-        type        :   String,
-        required    :   true
-    },
 
-    eventRequired : {
-        type        :   String
-    }
+    halls 	: [
+		{
+			type : mongoose.Schema.Types.ObjectId,
+			ref	 : "Hall"
+        }
+    ]
+    
 });
 const User  =   mongoose.model("User",userSchema);
 module.exports  =  User;

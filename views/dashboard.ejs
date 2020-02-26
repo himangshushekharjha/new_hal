@@ -1,3 +1,44 @@
-<h1 class="mt-4">Dashboard</h1>
-<p class="lead mb-3">Welcome users</p>
-<a href="/users/logout" class="btn btn-secondary">Logout</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <a class="navbar-brand" href="http://www.msrit.edu/index.html"><img id= "logo" src="http://d2e9h3gjmozu47.cloudfront.net/brand.png" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Hi <span class="sr-only">(current)</span></a>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="/users/logout" class="btn btn-secondary">Logout</a></li>
+    </ul>    
+    </div>
+  </nav>
+
+  
+  <div class="container">
+      <% for(const hall of halls){ %>
+      <!-- cards -->
+        <div class="card mb-3 my-5">
+            <h3 class="card-header"><%= hall.name %></h3>
+            
+            <div class="container text-center">
+                <img class="img-fluid "  style="max-width: 45%; display: block; margin: 30px auto; " src = "<%= hall.image %>" alt="Card image">
+            </div>
+    
+            <div class="card-body">
+              <p><%= hall.description %></p>
+              <a href="/dashboard/<%= hall._id %>" class="card-link btn btn-success">Book Now</a>
+            </div>
+            <div class="card-footer text-muted">
+              2 days ago
+            </div>
+          </div>
+
+          <hr>
+        <% } %>
+      </div>
+
+
+
