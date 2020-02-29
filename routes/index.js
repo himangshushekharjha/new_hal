@@ -16,7 +16,7 @@ router.get("/dashboard",ensureAuthenticated,(req,res)=>{
 			console.log(err);
 		}
 		else{
-			res.render("dashboard",{halls : allHalls});
+			res.render("dashboard",{halls : allHalls, currentUser : req.user.name});
 		}
 	});
     
