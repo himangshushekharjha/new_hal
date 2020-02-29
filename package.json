@@ -1,5 +1,5 @@
 {
-  "name": "AuthTraversy",
+  "name": "Hall app by himangshu",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -9,7 +9,7 @@
     "dev" :  "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Himangshu Shekhar Jha (himancifer)",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
